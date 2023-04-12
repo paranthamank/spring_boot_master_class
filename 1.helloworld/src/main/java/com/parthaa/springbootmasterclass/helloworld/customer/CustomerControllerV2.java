@@ -4,13 +4,12 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping(path = "api/v1/customer")
+@RequestMapping(path = "api/v2/customer")
 @RestController
-@Deprecated
-public class CustomerController {
+public class CustomerControllerV2 {
     private final CustomerService customerService;
     @Autowired
-    public CustomerController(CustomerService customerService) {
+    public CustomerControllerV2(CustomerService customerService) {
         this.customerService = customerService;
     }
 
