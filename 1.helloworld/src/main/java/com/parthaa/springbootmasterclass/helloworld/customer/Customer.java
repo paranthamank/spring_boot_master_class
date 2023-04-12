@@ -1,6 +1,6 @@
 package com.parthaa.springbootmasterclass.helloworld.customer;
 
-public class Customer {
+public class Customer{
 
     private final Long id;
     private final String name;
