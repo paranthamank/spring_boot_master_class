@@ -1,8 +1,11 @@
 package com.parthaa.springbootmasterclass.helloworld.customer;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class Customer{
 
     private final Long id;
+    @NotBlank
     private final String name;
 
     public Customer(Long id, String name) {
