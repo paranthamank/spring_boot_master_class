@@ -1,6 +1,7 @@
 package com.parthaa.springbootmasterclass.helloworld.customer;
 
 
+import com.parthaa.springbootmasterclass.helloworld.exception.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -28,7 +29,7 @@ public class CustomerService {
                 .filter (customer -> customer.getId ()
                         .equals (id))
                 .findFirst ()
-                .orElseThrow (() -> new IllegalStateException ("Customer Not Found"));
+                .orElseThrow (() -> new NotFoundException ("Customer Not Found"));
     }
 
 }
